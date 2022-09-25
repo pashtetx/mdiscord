@@ -1,1 +1,1 @@
-# mdiscord
+# MDiscord - Auto change your status discord.
