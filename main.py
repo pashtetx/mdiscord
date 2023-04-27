@@ -59,4 +59,4 @@ class Main():
 
 
 
-bot = Main("NjY3ODAxNTg2NTYyNjI5NjQz.GUeBYz.BsJvzVV7bik6ytYRhNS3PSOn6EOD2--pW9pACs", "time")
+bot = Main("your token here", "you status type here")
