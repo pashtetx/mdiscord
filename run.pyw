@@ -31,5 +31,4 @@ else:
 
 
 
-
 bot = Main(CONFIG["TOKEN"], CONFIG["STATUS_TYPE"])
