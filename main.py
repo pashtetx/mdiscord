@@ -12,19 +12,16 @@ class Main():
 		self.url = 'https://discord.com/api/users/@me/settings'
 		self.delay = 4
 
-		if select == 'ghoul':
-			self.ghoul()
-		elif select == 'loading':
-			self.loading()
-		elif select == "time":
+
+		if select == "time":
 			self.time()
 
-	def set_status(self, status):
+
+	def set_status(self, status: str) -> None:
 		res = requests.patch(self.url, headers = self.headers, data = dumps({'custom_status': {'text':status}}))
-		print(res.json())
 
-
-	def ghoul(self):
+ 
+	def ghoul(self): # ghoul
 
 		i = 6
 
@@ -36,7 +33,7 @@ class Main():
 				self.set_status("Я гуль")
 			sleep(self.delay)
 
-	def loading(self):
+	def loading(self): # loading
 		
 		i = 1
 
@@ -49,14 +46,10 @@ class Main():
 				self.set_status("Какой-то текст")
 				sleep(self.delay)
 
-	def time(self):
+
+	def time(self): # time
 
 		while True:
-
-			self.set_status(datetime.datetime.now().strftime("%H:%M"))
+			self.set_status(datetime.datetime.now().strftime("%H:%M")) # Set status formated now datetime.
 			sleep(self.delay)
 
-
-
-
-bot = Main("your token here", "you status type here")
