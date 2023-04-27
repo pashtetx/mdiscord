@@ -1,7 +1,7 @@
 from time import sleep
 from json import dumps
 import requests
-
+import datetime
 
 
 class Main():
@@ -16,6 +16,8 @@ class Main():
 			self.ghoul()
 		elif select == 'loading':
 			self.loading()
+		elif select == "time":
+			self.time()
 
 	def set_status(self, status):
 		res = requests.patch(self.url, headers = self.headers, data = dumps({'custom_status': {'text':status}}))
@@ -47,7 +49,14 @@ class Main():
 				self.set_status("Какой-то текст")
 				sleep(self.delay)
 
+	def time(self):
+
+		while True:
+
+			self.set_status(datetime.datetime.now().strftime("%H:%M"))
+			sleep(self.delay)
 
 
 
-bot = Main("your token here", "status type here")
+
+bot = Main("NjY3ODAxNTg2NTYyNjI5NjQz.GUeBYz.BsJvzVV7bik6ytYRhNS3PSOn6EOD2--pW9pACs", "time")
