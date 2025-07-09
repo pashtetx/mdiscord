@@ -4,3 +4,4 @@ main.spec
 data.json
 venv/
 __pycache__/
+config.ini

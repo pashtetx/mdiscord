@@ -1,2 +1,1 @@
-pyside6==6.9.0
-requests
+httpx
