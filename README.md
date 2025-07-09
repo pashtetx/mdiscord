@@ -20,5 +20,3 @@ Guide to start:
 2. [client] token - token discord user.
 3. [client] text - text to change with separator
 4. [client] separator - separator for the text
-
-## License
