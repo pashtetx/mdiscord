@@ -14,7 +14,7 @@ def read_config(file: str = "config.ini") -> ConfigParser:
 
 def get_delay(file: str = "config.ini") -> float:
     config = read_config(file=file)
-    return config.getfloat("settings", "delay") or 4.0
+    return config.getfloat("settings", "delay", fallback=None) or 4.0
 
 def get_clients(file: str = "config.ini") -> List[Client]:
     config = read_config(file=file)
